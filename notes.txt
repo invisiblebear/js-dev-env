@@ -1,1 +1,4 @@
-Notes 
+Notes
+
+https://editorconfig.org/
+used to create .editorconfig file to set vs code editor
