@@ -2,3 +2,8 @@ Notes
 
 https://editorconfig.org/
 used to create .editorconfig file to set vs code editor
+
+Package Managers
+	use npm
+
+node security platform - command line check for security vulnerablities - nsp check in console
