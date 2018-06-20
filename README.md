@@ -8,3 +8,6 @@ JavaScript Development Environment
 	- install Node Security Platform (https://github.com/nodesecurity/nsp)
 		- used to check npm packages for security issues. 
 		- nsp check in console
+
+	- srcServer.js
+	configures a web server to serve up files in source directory
