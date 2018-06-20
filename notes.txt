@@ -6,4 +6,27 @@ used to create .editorconfig file to set vs code editor
 Package Managers
 	use npm
 
-node security platform - command line check for security vulnerablities - nsp check in console
+node security platform - command line check for security vulnerablities - 'nsp check' in console
+	when to run security check
+		manually - easy to forget
+		npm install - may be have an issue later
+		prod build - expensive to change
+		pull request - expensive to change
+		npm start - slows start slightly
+
+express for local development
+	comprehensive
+	highly configurable
+	production grade
+	can run it everywhere
+
+Webpack Dev Server
+	built into Webpack
+	serves from memory
+	includes hot reloading
+
+Browsersync
+	Dedicated IP for sharing work on LAN
+	All interactions remain in sync!
+	great for cross-device testing
+	Integrates with Webpack, gulp, express and more
