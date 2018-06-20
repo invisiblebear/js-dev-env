@@ -14,6 +14,8 @@ node security platform - command line check for security vulnerablities - 'nsp c
 		pull request - expensive to change
 		npm start - slows start slightly
 
+Local Web Servers
+
 express for local development
 	comprehensive
 	highly configurable
@@ -30,3 +32,127 @@ Browsersync
 	All interactions remain in sync!
 	great for cross-device testing
 	Integrates with Webpack, gulp, express and more
+
+
+
+Sharing Work-in-progress
+
+	localtunnel - Easily share work on your local machine
+		setup:
+		1. npm install localtunnel -g
+		2. Start your app
+		3. in console -- lt --port 3000
+			can also specifiy specific subdomain
+				lt --port 3000 --subdomain <whatever>
+
+	ngrok - secure tunnel to your local machine
+		setup
+		1. Sign up
+		2. intall ngrok
+		3. install authtoken
+		4. start your app
+		5. ./ngrok http 80
+
+	now - easy way to deploy to the cloud - supports node.js projects
+		setup
+		1. npm install -g now
+		2. create start script
+		3. in console -- now
+
+	surge - Quickly host static files to public URL
+		Setup:
+		1. npm install -g surge
+		2. in console -- surge
+
+
+Automation Options
+
+	Grunt - the orginal
+		configuaration over code
+		writes intermediary files between steps
+		large plugin ecosystem
+
+	Gulp -
+		in-memory streams called pipes
+		faster than grunt
+		code over configuaration
+		large plugin ecosystem
+
+	npm Scripts - uses packages directly
+		declared in package.json
+		leverage your OS' command line
+		directly use npm packages
+		call node scripts
+		convention-based pre/post hooks
+		leverage world's largest package manager
+
+	 with npm scripts
+	 	add a script in the package.json
+
+		 example:
+		 	"scripts": {
+				"prestart" : "node buildScripts/startMessage.js",
+				"start" : "node buildScripts/srcServer.js"
+			}
+
+		Concurrent Tasks - you can chain your npm scripts together using npm-run-all --parallel
+
+			example:
+				"scripts": {
+					"prestart" : "node buildScripts/startMessage.js",
+					"start" : "npm-run-all --parallel security-check open:src",
+					"open:src" : "node buildScripts/srcServer.js",
+					"security-check" : "nsp check",
+					"localtunnel" : "lt --port 3000",
+					"share" : "npm-run-all --parallel open:src localtunnel"
+				}
+
+	Transpiling
+		Babel
+		TypeScript
+		Elm
+
+		Babel
+			Modern, standard-based JS, today
+			transpiles latest version of JS down to ES5
+			write standardized JS
+			leverage full JS ecosystem
+			use experimental features
+			no type defs, annotations required
+			ES6 imports are staticlly analyzable
+			Test, Lint, Babel, Great libs, IDE = safety
+
+		TypeScript
+			superset of javascript
+			adds additional functionality to JS
+			enhanced autocomplete
+			enhanced readabilty
+			safer refactoring
+			additional non-standard features
+
+
+		BABEL
+			.babelrc vs package.json
+
+				.babelrc - not npm specific and easier to read since isolated
+				package.json - one less file in your project
+					example:
+						{
+							"name" : "my-package",
+							"version" : "1.0.0",
+							"babel" : {
+								// bable config here
+							}
+						}
+
+			Build Script JS Style
+
+				ES5
+					- no waiting for transpile = faster
+					- no transpiler dependency
+
+				Transpiled
+					- Enjoy the latest features
+					- consistent coding style
+					- use the same linting rules everywhere
+					- can eventually remove transpiler

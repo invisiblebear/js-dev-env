@@ -11,3 +11,12 @@ JavaScript Development Environment
 
 	- srcServer.js
 	configures a web server to serve up files in source directory
+
+	in console run to open dev server:
+		node buildScripts/srcServer.js
+
+
+	For sharing local environment install Localtunnel
+		npm install localtunner -g
+		lt --port 3000 --subdomain <whatever>
+
