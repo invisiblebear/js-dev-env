@@ -107,4 +107,52 @@ Automation Options
 					"share" : "npm-run-all --parallel open:src localtunnel"
 				}
 
+	Transpiling
+		Babel
+		TypeScript
+		Elm
 
+		Babel
+			Modern, standard-based JS, today
+			transpiles latest version of JS down to ES5
+			write standardized JS
+			leverage full JS ecosystem
+			use experimental features
+			no type defs, annotations required
+			ES6 imports are staticlly analyzable
+			Test, Lint, Babel, Great libs, IDE = safety
+
+		TypeScript
+			superset of javascript
+			adds additional functionality to JS
+			enhanced autocomplete
+			enhanced readabilty
+			safer refactoring
+			additional non-standard features
+
+
+		BABEL
+			.babelrc vs package.json
+
+				.babelrc - not npm specific and easier to read since isolated
+				package.json - one less file in your project
+					example:
+						{
+							"name" : "my-package",
+							"version" : "1.0.0",
+							"babel" : {
+								// bable config here
+							}
+						}
+
+			Build Script JS Style
+
+				ES5
+					- no waiting for transpile = faster
+					- no transpiler dependency
+
+				Transpiled
+					- Enjoy the latest features
+					- consistent coding style
+					- use the same linting rules everywhere
+					- can eventually remove transpiler
