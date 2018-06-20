@@ -67,4 +67,44 @@ Sharing Work-in-progress
 
 Automation Options
 
+	Grunt - the orginal
+		configuaration over code
+		writes intermediary files between steps
+		large plugin ecosystem
+
+	Gulp -
+		in-memory streams called pipes
+		faster than grunt
+		code over configuaration
+		large plugin ecosystem
+
+	npm Scripts - uses packages directly
+		declared in package.json
+		leverage your OS' command line
+		directly use npm packages
+		call node scripts
+		convention-based pre/post hooks
+		leverage world's largest package manager
+
+	 with npm scripts
+	 	add a script in the package.json
+
+		 example:
+		 	"scripts": {
+				"prestart" : "node buildScripts/startMessage.js",
+				"start" : "node buildScripts/srcServer.js"
+			}
+
+		Concurrent Tasks - you can chain your npm scripts together using npm-run-all --parallel
+
+			example:
+				"scripts": {
+					"prestart" : "node buildScripts/startMessage.js",
+					"start" : "npm-run-all --parallel security-check open:src",
+					"open:src" : "node buildScripts/srcServer.js",
+					"security-check" : "nsp check",
+					"localtunnel" : "lt --port 3000",
+					"share" : "npm-run-all --parallel open:src localtunnel"
+				}
+
 
