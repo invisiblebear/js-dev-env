@@ -14,6 +14,8 @@ node security platform - command line check for security vulnerablities - 'nsp c
 		pull request - expensive to change
 		npm start - slows start slightly
 
+Local Web Servers
+
 express for local development
 	comprehensive
 	highly configurable
@@ -30,3 +32,39 @@ Browsersync
 	All interactions remain in sync!
 	great for cross-device testing
 	Integrates with Webpack, gulp, express and more
+
+
+
+Sharing Work-in-progress
+
+	localtunnel - Easily share work on your local machine
+		setup:
+		1. npm install localtunnel -g
+		2. Start your app
+		3. in console -- lt --port 3000
+			can also specifiy specific subdomain
+				lt --port 3000 --subdomain <whatever>
+
+	ngrok - secure tunnel to your local machine
+		setup
+		1. Sign up
+		2. intall ngrok
+		3. install authtoken
+		4. start your app
+		5. ./ngrok http 80
+
+	now - easy way to deploy to the cloud - supports node.js projects
+		setup
+		1. npm install -g now
+		2. create start script
+		3. in console -- now
+
+	surge - Quickly host static files to public URL
+		Setup:
+		1. npm install -g surge
+		2. in console -- surge
+
+
+Automation Options
+
+
