@@ -200,6 +200,37 @@ Automation Options
 			- built in hot-reloading web server
 			- bundle splitting
 
+	Sourcemaps
+		- map the bundled code back to the OG source
+		- part of the build
+		- only downloaded if dev tools open
+
+		can add 'debugger' to a js file to create a break point
 
 
+	Linting
+		Enforces Consistencey
+		Avoids Mistakes
 
+		JSLint - OG and not used anymore
+		JSHint - improves JSLint but not used much
+		ESLint - the best choice
+
+		where to put config location?
+			- dedicatetd config vs package.json
+
+		which rules?
+			- decide as a team
+
+		warnings vs errors
+			- warning do not stop development and can be ignored
+			- errors break the build and cannot be ignored
+
+		which plugins?
+			- https://github.com/dustinspecker/awesome-eslint
+
+		Use a preset?
+			-
+
+	eslint-loader - re-lints all files upon save
+	eslint-watch - ESLint wrapper that adds file watch // not tied to webpack // displays clean message
