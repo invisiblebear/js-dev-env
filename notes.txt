@@ -156,3 +156,81 @@ Automation Options
 					- consistent coding style
 					- use the same linting rules everywhere
 					- can eventually remove transpiler
+
+	Bundling
+		commonJS does not work in the browser
+
+		5 module formats
+			IFFE
+			Ayschronous Module Definition (AMD)
+			CommonJS (CJS)
+			Universal Module Definition (UMD)
+			ES6 Modules
+
+			should be using CommonJS or ES6 Modules
+				- ES6 are standardized
+				- Statically analyzable
+					improve autocomplete
+					intelligent refactoring
+					Fails faster
+					tree shaking (removes unused code)
+				- Easier to read
+					- named imports
+					- default exports
+
+		Require.js - first popular one, not used much anymore
+
+		Rollup - fiirst to offer tree shaking
+			- faster loading production code
+			- quite new
+			- great for library
+			- no hot reloading or code splitting
+
+		JSPM - Uses systemJS, a univeral module loader
+			- can load modules at runtime
+			- has own package manager
+			- uses Rollup
+
+		Browserify - OG bundler
+			bundle npm packages for the web
+			large plugin ecosystem
+
+		webpack - bundle more than JS
+			- import CSS, images, etc like JS
+			- built in hot-reloading web server
+			- bundle splitting
+
+	Sourcemaps
+		- map the bundled code back to the OG source
+		- part of the build
+		- only downloaded if dev tools open
+
+		can add 'debugger' to a js file to create a break point
+
+
+	Linting
+		Enforces Consistencey
+		Avoids Mistakes
+
+		JSLint - OG and not used anymore
+		JSHint - improves JSLint but not used much
+		ESLint - the best choice
+
+		where to put config location?
+			- dedicatetd config vs package.json
+
+		which rules?
+			- decide as a team
+
+		warnings vs errors
+			- warning do not stop development and can be ignored
+			- errors break the build and cannot be ignored
+
+		which plugins?
+			- https://github.com/dustinspecker/awesome-eslint
+
+		Use a preset?
+			-
+
+	eslint-loader - re-lints all files upon save
+	eslint-watch - ESLint wrapper that adds file watch // not tied to webpack // displays clean message

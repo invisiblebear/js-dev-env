@@ -13,10 +13,12 @@ JavaScript Development Environment
 	configures a web server to serve up files in source directory
 
 	in console run to open dev server:
-		node buildScripts/srcServer.js
+		npm start
 
 
 	For sharing local environment install Localtunnel
 		npm install localtunner -g
 		lt --port 3000 --subdomain <whatever>
 
+This project uses babel as its transpiler
+This project uses webpack as its bundler
