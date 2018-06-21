@@ -156,3 +156,50 @@ Automation Options
 					- consistent coding style
 					- use the same linting rules everywhere
 					- can eventually remove transpiler
+
+	Bundling
+		commonJS does not work in the browser
+
+		5 module formats
+			IFFE
+			Ayschronous Module Definition (AMD)
+			CommonJS (CJS)
+			Universal Module Definition (UMD)
+			ES6 Modules
+
+			should be using CommonJS or ES6 Modules
+				- ES6 are standardized
+				- Statically analyzable
+					improve autocomplete
+					intelligent refactoring
+					Fails faster
+					tree shaking (removes unused code)
+				- Easier to read
+					- named imports
+					- default exports
+
+		Require.js - first popular one, not used much anymore
+
+		Rollup - fiirst to offer tree shaking
+			- faster loading production code
+			- quite new
+			- great for library
+			- no hot reloading or code splitting
+
+		JSPM - Uses systemJS, a univeral module loader
+			- can load modules at runtime
+			- has own package manager
+			- uses Rollup
+
+		Browserify - OG bundler
+			bundle npm packages for the web
+			large plugin ecosystem
+
+		webpack - bundle more than JS
+			- import CSS, images, etc like JS
+			- built in hot-reloading web server
+			- bundle splitting
+
+
+
+

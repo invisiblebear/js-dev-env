@@ -21,3 +21,4 @@ JavaScript Development Environment
 		lt --port 3000 --subdomain <whatever>
 
 This project uses babel as its transpiler
+This project uses webpack as its bundler
