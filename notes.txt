@@ -306,6 +306,38 @@ Automation Options
 				- Semaphore
 				- SnapCI
 
+	HTTP Calls
+
+		Approaches
+			node - http request
+			browser - XMLHttpRequest, jQuery, framework-based, Fetch
+			Node & Browser - isomorphich-fetch, xhr, SuperAgent, Axios
+
+		Centralize API Calls?
+			do in 1 place - Configure all calls, handle preloader logic, handle errors, single seam for mocking API
+
+		Fetch:
+			why send polyfill to everyone?
+
+		Why Mock HTTP?
+			- unit testing
+			- instant response
+			- Keep working when services are down
+			- rapid prototyping
+			- Avoid inter-team bottlenecks
+			- work offline
+
+			Nock
+				you tell nock a specific url and nock will hijack any call to that url and return the data you tell it to.
+
+			Static JSON
+
+			Create development webserver
+				- api-mock
+				- JSON server - saves changes made to the data
+				- JSON Schema faker
+
+
 
 
 
