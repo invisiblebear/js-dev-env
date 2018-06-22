@@ -234,3 +234,78 @@ Automation Options
 
 	eslint-loader - re-lints all files upon save
 	eslint-watch - ESLint wrapper that adds file watch // not tied to webpack // displays clean message
+
+
+	Testing and Continuous Integration
+
+		unit testing - single function or module
+		integration testing - interactions between modules
+		UI testing - Automate interactions with UI
+
+		Things to decide:
+		1. framework
+		2. assertion library
+		3. helper library
+		4. where to run tests
+		5. where to place tests
+		6. when to run tests
+
+		Frameworks
+			- mocha
+			- jasmine
+			- tape
+			- QUnit
+			- AVA
+			- Jest
+
+
+		Assertion - declare what you expect from a test
+			example: expect(2+2).to.equal(4)
+
+			most popular assertion library is Chai
+
+
+		Helper Library
+			- JSDOM
+				- simulates the browser's DOM
+				- Run DOM related tests without the browser
+
+			- Cherrio
+				- jQuery for the server
+				- Query vitrual DOM using jQuery selectors
+
+		Where to Run tests
+			Browser
+				- Karma, Testem
+
+			Headless Browser
+				- PhantomJS
+
+			In-memory DOM
+				- JSDOM
+
+
+		Where to put tests
+			- place tests along side the code that is being tested
+
+
+
+		Continuous Integration
+			- will catch code that has been committed that has errors
+			- catches mistakes quickly
+			- Run automated build
+			- Runs test suite
+			- check code coverage
+			- automated deployment
+
+			CI Servers
+				- Travis - runs on linux machines
+				- Appveyor - runs on windows
+				- Jenkins
+				- CircleCI
+				- Semaphore
+				- SnapCI
+
+
+
+
