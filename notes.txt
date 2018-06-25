@@ -337,6 +337,16 @@ Automation Options
 				- JSON server - saves changes made to the data
 				- JSON Schema faker
 
+		1. Declare our Schema
+				JSON Schema Faker
+
+		2. Generate Random Data:
+				faker.js
+				chance.js
+				randexp.js
+
+		3. Serve Data via API
+				JSON Server
 
 
 
