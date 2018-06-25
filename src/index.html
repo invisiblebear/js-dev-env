@@ -15,6 +15,10 @@
 			</thead>
 			<tbody id=users>
 
+				<% if (htmlWebpackPlugin.options.testProp) { %>
+					<h3><%=htmlWebpackPlugin.options.testProp%></h3>
+				<% } %>
+
 			</tbody>
 		</table>
 	</body>

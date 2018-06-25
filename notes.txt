@@ -358,5 +358,21 @@ PRODUCTION BUILD
 		avoid redownloading all libraries
 		speed intial page load
 
+	Cache Busting
+		Save HTTP requests
+		Force request for the latest version
+
+		1. hash bundle filename
+		2. generate html dynamically
+
+		webpackMD5hash
+
+	JS Error Logging:
+		track.js
+		sentry
+		new relic
+		raygun
+
+	HTML Templates via Embedded JS (EJS)
 
 
