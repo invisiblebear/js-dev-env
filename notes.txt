@@ -349,5 +349,14 @@ Automation Options
 				JSON Server
 
 
+PRODUCTION BUILD
+
+	Minification
+
+	Bundle splitting
+		keeps from loading all JS for app on every page
+		avoid redownloading all libraries
+		speed intial page load
+
 
 
