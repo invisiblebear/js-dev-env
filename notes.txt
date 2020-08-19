@@ -234,3 +234,145 @@ Automation Options
 
 	eslint-loader - re-lints all files upon save
 	eslint-watch - ESLint wrapper that adds file watch // not tied to webpack // displays clean message
+
+
+	Testing and Continuous Integration
+
+		unit testing - single function or module
+		integration testing - interactions between modules
+		UI testing - Automate interactions with UI
+
+		Things to decide:
+		1. framework
+		2. assertion library
+		3. helper library
+		4. where to run tests
+		5. where to place tests
+		6. when to run tests
+
+		Frameworks
+			- mocha
+			- jasmine
+			- tape
+			- QUnit
+			- AVA
+			- Jest
+
+
+		Assertion - declare what you expect from a test
+			example: expect(2+2).to.equal(4)
+
+			most popular assertion library is Chai
+
+
+		Helper Library
+			- JSDOM
+				- simulates the browser's DOM
+				- Run DOM related tests without the browser
+
+			- Cherrio
+				- jQuery for the server
+				- Query vitrual DOM using jQuery selectors
+
+		Where to Run tests
+			Browser
+				- Karma, Testem
+
+			Headless Browser
+				- PhantomJS
+
+			In-memory DOM
+				- JSDOM
+
+
+		Where to put tests
+			- place tests along side the code that is being tested
+
+
+
+		Continuous Integration
+			- will catch code that has been committed that has errors
+			- catches mistakes quickly
+			- Run automated build
+			- Runs test suite
+			- check code coverage
+			- automated deployment
+
+			CI Servers
+				- Travis - runs on linux machines
+				- Appveyor - runs on windows
+				- Jenkins
+				- CircleCI
+				- Semaphore
+				- SnapCI
+
+	HTTP Calls
+
+		Approaches
+			node - http request
+			browser - XMLHttpRequest, jQuery, framework-based, Fetch
+			Node & Browser - isomorphich-fetch, xhr, SuperAgent, Axios
+
+		Centralize API Calls?
+			do in 1 place - Configure all calls, handle preloader logic, handle errors, single seam for mocking API
+
+		Fetch:
+			why send polyfill to everyone?
+
+		Why Mock HTTP?
+			- unit testing
+			- instant response
+			- Keep working when services are down
+			- rapid prototyping
+			- Avoid inter-team bottlenecks
+			- work offline
+
+			Nock
+				you tell nock a specific url and nock will hijack any call to that url and return the data you tell it to.
+
+			Static JSON
+
+			Create development webserver
+				- api-mock
+				- JSON server - saves changes made to the data
+				- JSON Schema faker
+
+		1. Declare our Schema
+				JSON Schema Faker
+
+		2. Generate Random Data:
+				faker.js
+				chance.js
+				randexp.js
+
+		3. Serve Data via API
+				JSON Server
+
+
+PRODUCTION BUILD
+
+	Minification
+
+	Bundle splitting
+		keeps from loading all JS for app on every page
+		avoid redownloading all libraries
+		speed intial page load
+
+	Cache Busting
+		Save HTTP requests
+		Force request for the latest version
+
+		1. hash bundle filename
+		2. generate html dynamically
+
+		webpackMD5hash
+
+	JS Error Logging:
+		track.js
+		sentry
+		new relic
+		raygun
+
+	HTML Templates via Embedded JS (EJS)
+
+

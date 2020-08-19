@@ -20,5 +20,14 @@ JavaScript Development Environment
 		npm install localtunner -g
 		lt --port 3000 --subdomain <whatever>
 
-This project uses babel as its transpiler
-This project uses webpack as its bundler
+	TRANSPILER: Babel
+	BUNDLER : webpack
+
+	UNIT TESTING
+	framework: mocha
+	Assertion Library: Chai
+	Helper Library: JSDOM
+	Running Test in Node
+	Place test alongside code to be tested
+	Tests are run on save 
+
